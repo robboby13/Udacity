@@ -1,13 +1,11 @@
 # The lane detection algorithm was developed on the NVIDIA TX2 embedded platform
 Libraries OpenCV3.2 with Python3 Bindings
 
-Reference the below tutorial for help with installing these libraries
+Reference the tutorial for help with installing these libraries
 https://www.youtube.com/watch?v=GlDjscSAtDY
 
 Full Git
 https://github.com/jetsonhacks/buildOpenCVTX2
-
-When running the
 
 To run the the build file
 
