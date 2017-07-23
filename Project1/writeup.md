@@ -12,6 +12,7 @@ Region of Interest was adjusted to get rid of dashboard in collected video. ROI 
 
 ![alt text](https://github.com/robboby13/Udacity/blob/master/Project1/Image%20Results/lane_lines_1/yellow_lane_ROI.png)
 
+
 For the second excercise the region of interest was adjusted to be a four sided polygon.
 
 ![alt text](https://github.com/robboby13/Udacity/blob/master/Project1/Image%20Results/lane_lines_2/lane_lines_roi.png)
@@ -46,17 +47,17 @@ def image_pipeline(img):
 
     return line_edges
 
-#Solid White Curve
+# Solid White Curve
 ![alt text](https://github.com/robboby13/Udacity/blob/master/Project1/Image%20Results/Project/solidwhitecurve.png)
-#Solid White Right
+# Solid White Right
 ![alt text](https://github.com/robboby13/Udacity/blob/master/Project1/Image%20Results/Project/solidwhiteright.png)
-#Solid Yellow Curve
+# Solid Yellow Curve
 ![alt text](https://github.com/robboby13/Udacity/blob/master/Project1/Image%20Results/Project/solidyellowcurve.png)
-#Solid Yellow Curve2
+# Solid Yellow Curve2
 ![alt text](https://github.com/robboby13/Udacity/blob/master/Project1/Image%20Results/Project/solidyellowcurve2.png)
-#Solid Yellow Left
+# Solid Yellow Left
 ![alt text](https://github.com/robboby13/Udacity/blob/master/Project1/Image%20Results/Project/solidyellowleft.png)
-#Whtie Car Lane Switch
+# Whtie Car Lane Switch
 ![alt text](https://github.com/robboby13/Udacity/blob/master/Project1/Image%20Results/Project/whitecarlaneswitch.png)
 
 # Shortcomings
