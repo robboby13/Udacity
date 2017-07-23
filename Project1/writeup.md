@@ -1,45 +1,62 @@
 # Finding Lane Lines on the Road
 
-Insert Photo here
+![alt text](https://github.com/robboby13/Udacity/blob/master/Project1/Image%20Results/Project/solidwhitecurve.png)
 
 # Project Excerises
-For the first excercise of determining which pixels to use I took the average of three pixels and generated two values for yellow and white 
-Yellow: []
-White: []
-Average: []
+For the first excercise of determining which pixels to use an average of three pixels was taken and generated two values for yellow and white 
+
 The following images represents the results from each RGB value.
 Note: These videos were taken on Detroit Roads
 
 Region of Interest was adjusted to get rid of dashboard in collected video. ROI = Triangle
 
-left_bottom = []
-right_bottom = []
-apex = []
+![alt text](https://github.com/robboby13/Udacity/blob/master/Project1/Image%20Results/lane_lines_1/yellow_lane_ROI.png)
 
-Insert Images here
+For the second excercise the region of interest was adjusted to be a four sided polygon.
 
-For the second excercise I had to adjust the region of interest to be a four sided polygon since the video collected has the dash board in the images
-
-left_bottom = []
-left_top = []
-right_top = []
-right_bottom = []
-
-Insert Images
+![alt text](https://github.com/robboby13/Udacity/blob/master/Project1/Image%20Results/lane_lines_2/lane_lines_roi.png)
 
 # Image Pipeline Function.
 
-As part of the description, explain how you modified the draw_lines() function.
-My pipeline consisted of 5 steps. First, I converted the images to grayscale, then I ....
-In order to draw a single line on the left and right lanes, I modified the draw_lines() function by ...
-If you'd like to include images to show how the pipeline works, here is how to include an image:
+The pipline is referenced below, the provided videos/images were used. The original image was taken to a gray scale this was then taken and applied to a gaussian smoothing function to eliminate any noise. The canny edge function was then applied. Followed by definig our ROI with four vertices. Hough Transform was applied with the below values. All results can be seen below
+
+def image_pipeline(img):
+    gray = grayscale(img)
+    kernel_size=5
+    blur_gray=gaussian_blur(gray,kernel_size)
+    low_threshold = 38
+    high_threshold = 145
+    edges=canny(blur_gray, low_threshold, high_threshold)
+    vertices = np.array([[(138,537),(460,316), (500,316), (920,537)]], dtype=np.int32)
+    masked_edges=region_of_interest(edges,vertices)
+
+    rho = 1
+    theta = np.pi / 180
+    threshold_hough = 20
+    min_line_length = 7
+    max_line_gap = 5
+    line_image = hough_lines(masked_edges, rho, theta, threshold_hough, min_line_length, max_line_gap)
+    line_edges = weighted_img(line_image, img)
+
+    if not is_video_file:
+        fig = plt.figure()
+        plt.imshow(line_edges)
+        plt.show()
+
+    return line_edges
+
+![alt text](https://github.com/robboby13/Udacity/blob/master/Project1/Image%20Results/Project/solidwhitecurve.png)
+![alt text](https://github.com/robboby13/Udacity/blob/master/Project1/Image%20Results/Project/solidwhiteright.png)
+![alt text](https://github.com/robboby13/Udacity/blob/master/Project1/Image%20Results/Project/solidyellowcurve.png)
+![alt text](https://github.com/robboby13/Udacity/blob/master/Project1/Image%20Results/Project/solidyellowcurve2.png)
+![alt text](https://github.com/robboby13/Udacity/blob/master/Project1/Image%20Results/Project/solidyellowleft.png)
+![alt text](https://github.com/robboby13/Udacity/blob/master/Project1/Image%20Results/Project/whitecarlaneswitch.png)
 
 # Shortcomings
 
-One potential shortcoming would be what would happen when ...
-Another shortcoming could be ...
+Currently there is some merging happening at further distances that need to get improved upon. Overall the performance in the near range was fairly accurate, long range still needs some work. 
+
 
 # Needed Improvements
 
-A possible improvement would be to ...
-Another potential improvement could be to ...
+The challange video shadows proved to be difficult and could still use some improvements
