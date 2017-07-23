@@ -20,6 +20,7 @@ For the second excercise the region of interest was adjusted to be a four sided 
 
 The pipline is referenced below, the provided videos/images were used. The original image was taken to a gray scale this was then taken and applied to a gaussian smoothing function to eliminate any noise. The canny edge function was then applied. Followed by definig our ROI with four vertices. Hough Transform was applied with the below values. All results can be seen below
 
+
 def image_pipeline(img):
     gray = grayscale(img)
     kernel_size=5
@@ -45,11 +46,17 @@ def image_pipeline(img):
 
     return line_edges
 
+#Solid White Curve
 ![alt text](https://github.com/robboby13/Udacity/blob/master/Project1/Image%20Results/Project/solidwhitecurve.png)
+#Solid White Right
 ![alt text](https://github.com/robboby13/Udacity/blob/master/Project1/Image%20Results/Project/solidwhiteright.png)
+#Solid Yellow Curve
 ![alt text](https://github.com/robboby13/Udacity/blob/master/Project1/Image%20Results/Project/solidyellowcurve.png)
+#Solid Yellow Curve2
 ![alt text](https://github.com/robboby13/Udacity/blob/master/Project1/Image%20Results/Project/solidyellowcurve2.png)
+#Solid Yellow Left
 ![alt text](https://github.com/robboby13/Udacity/blob/master/Project1/Image%20Results/Project/solidyellowleft.png)
+#Whtie Car Lane Switch
 ![alt text](https://github.com/robboby13/Udacity/blob/master/Project1/Image%20Results/Project/whitecarlaneswitch.png)
 
 # Shortcomings
