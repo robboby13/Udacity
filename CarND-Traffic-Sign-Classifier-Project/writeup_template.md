@@ -12,10 +12,8 @@ The goals / steps of this project are the following:
 * Summarize the results with a written report
 
 ---
-###Writeup / README
- [project code](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/Traffic_Sign_Classifier2.ipynb)
+Juniper Notebook [project code](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/Traffic_Sign_Classifier2.ipynb)
 
-###Data Set Summary & Exploration
 
 I used the pandas library to calculate summary statistics of the traffic
 signs data set:
@@ -26,44 +24,55 @@ signs data set:
 * The shape of a traffic sign image is (32, 32, 3)
 * The number of unique classes/labels in the data set is 43
 
-###Data Analysis
 
 Here is an exploratory visualization of the data set. It is a bar chart showing all 43 classes and the number of samples associated with each class.
 
 ![alt text](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/images/training_sign_bar_chart.png)
 
+
 Each classID had an appropriate label for their respective German Traffic Sig
 
 ![alt text](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/images/classes.png)
 
-###Design and Test a Model Architecture
+
 
 When preparing the data for training it was required to convert the traffic sign images from RGB (32, 32, 3) to grayscale (32, 32, 1). To do this we used the openCV library with python3 bindings. Following this step the data was normalized. Both of these functions were input into the preprocess function resulting in the following.
 
 
 ![alt text](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/images/processed_grayscaled_normalized.png)
 
+
+
 My final model was based off the LeNet2 architecture and consisted of the following layers (as commented in the code)
 
 Layer 1: Convolution: input(32, 32, 1) output(28, 28, 6)
+
 Layer 1: Activation Function (Relu)
+
 Layer 1: Pooling: input(28, 28, 6) output(14, 14, 6)
 
 Layer 2: Convolution: input(14, 14, 6) output(10, 10, 16)
+
 Layer 2: Activation (Relu)
+
 Layer 2: Pooling: input(10, 10, 16) output(5, 5, 16)
 
 Layer 3: Convolution: input(5, 5, 16) output(1, 1, 400)
+
 Layer 3: Activation (Relu)
+
 Layer 3: Flatten: input(5,5,16) output(400)
+
 Layer 3: Flatten X: input(1,1,400) output(400)
+
 Layer 3: Concat: input(400 + 400) output(800)
+
 Layer 3: Dropout
 
 Layer 4 (Fully Connected): input(800) output(43)
 
 
-When the training the model EPOCHS, BATCH_SIZE, and sigma were adjusted to reach a 93% accuaracy mark.
+When training the model EPOCHS, BATCH_SIZE, and sigma were adjusted to reach a 93% accuaracy mark.
 
 My final model results were:
 * validation set accuracy of 93.1%
@@ -71,13 +80,8 @@ My final model results were:
 
 An iterative approach was taken, originally the LeNet1 architecture was tried with unsuccusful results
 
-Some of the struggles faced...
-Unable to reach the 93% accuarcy requirement
+With the LeNet1 Architecture I was unable to meet the 93% accuarcy requirement
 
-A variation of parameters were tuned including...
-EPOCHS, BATCH_SIZE, and sigma were adjusted to reach the 93% compliance mark
-
-###Test a Model on New Images
 
 Here are ten German traffic signs that I found on the web, the preprocessing function was applied to all ten for grayscale and data normalization.
 
@@ -111,7 +115,9 @@ Here are the results of the predictions:
 
 The model was only 30% accuarate! NOT GOOD. This may have to do with the images not being fully centered, some of the images have significant amount of noise. 
 
+
 For example the stop sign is not completley centered.
+
 ![Uncentered STOP Sign](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/fourteen.jpg) 
 
 Below you can find the top 5 predictions for each German Traffic Sign
