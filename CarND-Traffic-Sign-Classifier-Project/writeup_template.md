@@ -92,7 +92,6 @@ Here are ten German traffic signs that I found on the web, the preprocessing fun
 ![Class ID 14](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/fourteen.jpg) 
 ![alt text](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/twentyfive.jpg)
 
-####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
 Here are the results of the predictions:
 
@@ -117,6 +116,8 @@ For example the stop sign is not completley centered.
 
 Below you can find the top 5 predictions for each German Traffic Sign
 
+![Class ID 5](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/five.jpg)
+
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
 | .209         			| Dangerous Curve to the right   									| 
@@ -126,6 +127,7 @@ Below you can find the top 5 predictions for each German Traffic Sign
 | .064				    | Traffic signals      							|
 
 
+![Class ID 8](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/eight.jpg)
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -135,6 +137,7 @@ Below you can find the top 5 predictions for each German Traffic Sign
 | .0627	      			| Speed limit (20km/h)					 				|
 | .0491				    | Speed limit (70km/h)      							|
 
+![alt text](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/twelve.jpg)
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -144,6 +147,7 @@ Below you can find the top 5 predictions for each German Traffic Sign
 | .0552	      			| Road work					 				|
 | .0429				    | Turn right ahead      							|
 
+![alt text](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/nine.jpg)
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -153,6 +157,7 @@ Below you can find the top 5 predictions for each German Traffic Sign
 | .0483	      			| Right-of-way at the next intersection					 				|
 | .0411				    | No passing for vehicles over 3.5 metric tons      							|
 
+![alt text](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/thirteen.jpg)
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -162,6 +167,7 @@ Below you can find the top 5 predictions for each German Traffic Sign
 | .0365	      			| Speed limit (30km/h)					 				|
 | .034				    | Roundabout mandatory      							|
 
+![alt text](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/three.jpg)
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -172,6 +178,7 @@ Below you can find the top 5 predictions for each German Traffic Sign
 | .0524				    | Children crossing      							|
 
 
+![Class ID 15](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/fifteen.jpg) 
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -181,6 +188,7 @@ Below you can find the top 5 predictions for each German Traffic Sign
 | .117	      			| No entry					 				|
 | .0759				    | Go straight or left      							|
 
+![alt text](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/thirty.jpg)
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -190,6 +198,7 @@ Below you can find the top 5 predictions for each German Traffic Sign
 | .0583	      			| Roundabout mandatory					 				|
 | .0571				    | Road work      							|
 
+![Class ID 14](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/fourteen.jpg) 
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
@@ -199,6 +208,7 @@ Below you can find the top 5 predictions for each German Traffic Sign
 | .0567	      			| Keep right				 				|
 | .0487				    | Roundabout mandatory      							|
 
+![alt text](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/twentyfive.jpg)
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
