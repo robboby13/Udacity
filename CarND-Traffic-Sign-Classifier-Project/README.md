@@ -31,7 +31,7 @@ signs data set:
 
 Here is an exploratory visualization of the data set. It is a bar chart showing all 43 classes and the number of samples associated with each class.
 
-![Bar Chart] (./images/training_sign_bar_chart.png)
+![Bar Chart] (https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/images/training_sign_bar_chart.png)
 
 Here you can view each classID with associated sign name.
 
