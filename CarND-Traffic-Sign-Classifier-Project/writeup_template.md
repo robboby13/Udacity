@@ -36,7 +36,7 @@ Each classID had an appropriate label for their respective German Traffic Sig
 
 
 
-When preparing the data for training it was required to convert the traffic sign images from RGB (32, 32, 3) to grayscale (32, 32, 1). To do this we used the openCV library with python3 bindings. Following this step the data was normalized. Both of these functions were input into the preprocess function resulting in the following.
+When preparing the data for training it was required to convert the traffic sign images from RGB (32, 32, 3) to grayscale (32, 32, 1). To do this we used the openCV function COLOR_RGB2GRAY. To scale the images numeric values down we normalize the images using the openCV function NORM_MINMAX.  Both of these functions were input into the preprocess function resulting in the following.
 
 
 ![alt text](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/images/processed_grayscaled_normalized.png)
@@ -74,16 +74,13 @@ Layer 4 (Fully Connected): input(800) output(43)
 
 When training the model EPOCHS, BATCH_SIZE, and sigma were adjusted to reach a 93% accuaracy mark.
 
+Final Model Parameters using the Adam Optimizer
+
+EPOCHS = 100, BATCH_SIZE = 80, mu = 0, sigma = 0.125, rate = 0.0009
+
 My final model results were:
 * validation set accuracy of 93.1%
 * test set accuracy of 91.3%
-
-Final Model Parameters
-EPOCHS = 100
-BATCH_SIZE = 80
-mu = 0
-sigma = 0.125
-rate = 0.0009
 
 An iterative approach was taken, originally the LeNet1 architecture was tried with unsuccusful results
 
