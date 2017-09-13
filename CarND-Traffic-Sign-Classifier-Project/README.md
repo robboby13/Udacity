@@ -18,7 +18,7 @@ The goals / steps of this project are the following:
  
 [project code](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/Traffic_Sign_Classifier2.ipynb)
 
-####Data Set Summary & Exploration
+##Data Set Summary & Exploration
 
 
 I used the pandas library to calculate summary statistics of the traffic
