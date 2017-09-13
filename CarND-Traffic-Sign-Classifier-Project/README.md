@@ -51,16 +51,13 @@ Here is an exploratory visualization of the data set. It is a bar chart showing 
 Here you can view each classID with associated sign name.
 
 ![alt text][https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/images/classes.png}
-###Design and Test a Model Architecture
 
-####1. When preparing the data for training it was required to convert the traffic sign images from RGB (32, 32, 3) to grayscale (32, 32, 1). To do this we used the openCV library with python3 bindings. Following this step the data was normalized. Both of these functions were input into the preprocess function resulting in the following.
+
+When preparing the data for training it was required to convert the traffic sign images from RGB (32, 32, 3) to grayscale (32, 32, 1). To do this we used the openCV library with python3 bindings. Following this step the data was normalized. Both of these functions were input into the preprocess function resulting in the following.
 
 
 ![alt text][https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/images/processed_grayscaled_normalized.png]
 
-
-
-####2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
 
 My final model was based off the LeNet2 architecture and consisted of the following layers (as commented in the code)
 
@@ -82,38 +79,34 @@ Layer 3: Dropout
 Layer 4 (Fully Connected): input(800) output(43)
 
 
-####4. When the training the model the EPOCHS, BATCH_SIZE, and sigma were adjusted to reach the 93% compliance mark.
+When the training the model the EPOCHS, BATCH_SIZE, and sigma were adjusted to reach the 93% compliance mark.
+
+EPOCHS = 100
+BATCH_SIZE = 80
+mu = 0
+sigma = 0.125
+rate = 0.009
 
 My final model results were:
 * validation set accuracy of 93.1%
 * test set accuracy of 91.3%
 
-If an iterative approach was chosen:
 * What was the first architecture that was tried and why was it chosen?
 Originally the LeNet1 architecture was tried with unsuccusful results
 
 * What were some problems with the initial architecture?
 Unable to reach the 93$ accuarcy requirement
-
-* Which parameters were tuned? How were they adjusted and why?
-EPOCHS, BATCH_SIZE, and sigma were adjusted to reach the 93% compliance mark
-
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
-
-If a well known architecture was chosen:
-* What architecture was chosen?
-* Why did you believe it would be relevant to the traffic sign application?
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
  
 
-###Test a Model on New Images
+All test model images can be view ![alt text][https://github.com/robboby13/Udacity/tree/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg]
 
-####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
-Here are five German traffic signs that I found on the web:
+Here are ten German traffic signs that I found on the web:
 
-![alt text][image4] ![alt text][image5] ![alt text][image6] 
-![alt text][image7] ![alt text][image8]
+![alt text][https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/eight.jpg] ![alt text][https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/fifteen.jpg] ![alt text][https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/five.jpg] 
+![alt text][https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/fourteen.jpg] ![alt text][https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/nine.jpg]
+![alt text][https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/thirteen.jpg] ![alt text][https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/thirty.jpg] ![alt text][https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/three.jpg] 
+![alt text][https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/twelve.jpg] ![alt text][https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/twentyfive.jpg]
 
 The first image might be difficult to classify because ...
 
