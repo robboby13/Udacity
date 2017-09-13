@@ -20,7 +20,6 @@ The goals / steps of this project are the following:
 
 ##Data Set Summary & Exploration
 
-
 I used the pandas library to calculate summary statistics of the traffic
 signs data set:
 
@@ -30,10 +29,9 @@ signs data set:
 * The shape of a traffic sign image is (32, 32, 3)
 * The number of unique classes/labels in the data set is 43
 
-
 Here is an exploratory visualization of the data set. It is a bar chart showing all 43 classes and the number of samples associated with each class.
 
-![alt text][https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/images/training_sign_bar_chart.png]
+![alt text][/images/training_sign_bar_chart.png]
 
 Here you can view each classID with associated sign name.
 
