@@ -78,6 +78,13 @@ My final model results were:
 * validation set accuracy of 93.1%
 * test set accuracy of 91.3%
 
+Final Model Parameters
+EPOCHS = 100
+BATCH_SIZE = 80
+mu = 0
+sigma = 0.125
+rate = 0.0009
+
 An iterative approach was taken, originally the LeNet1 architecture was tried with unsuccusful results
 
 With the LeNet1 Architecture I was unable to meet the 93% accuarcy requirement
