@@ -43,10 +43,6 @@ When preparing the data for training it was required to convert the traffic sign
 
 ![alt text](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/images/processed_grayscaled_normalized.png)
 
-
-
-####2. Describe what your final model architecture looks like including model type, layers, layer sizes, connectivity, etc.) Consider including a diagram and/or table describing the final model.
-
 My final model was based off the LeNet2 architecture and consisted of the following layers (as commented in the code)
 
 Layer 1: Convolution: input(32, 32, 1) output(28, 28, 6)
@@ -67,35 +63,25 @@ Layer 3: Dropout
 Layer 4 (Fully Connected): input(800) output(43)
 
 
-####4. When the training the model the EPOCHS, BATCH_SIZE, and sigma were adjusted to reach the 93% compliance mark.
+When the training the model EPOCHS, BATCH_SIZE, and sigma were adjusted to reach a 93% accuaracy mark.
 
 My final model results were:
 * validation set accuracy of 93.1%
 * test set accuracy of 91.3%
 
-If an iterative approach was chosen:
-* What was the first architecture that was tried and why was it chosen?
-Originally the LeNet1 architecture was tried with unsuccusful results
+An iterative approach was taken, originally the LeNet1 architecture was tried with unsuccusful results
 
-* What were some problems with the initial architecture?
-Unable to reach the 93$ accuarcy requirement
+Some of the struggles faced...
+Unable to reach the 93% accuarcy requirement
 
-* Which parameters were tuned? How were they adjusted and why?
+A variation of parameters were tuned including...
 EPOCHS, BATCH_SIZE, and sigma were adjusted to reach the 93% compliance mark
-
-* What are some of the important design choices and why were they chosen? For example, why might a convolution layer work well with this problem? How might a dropout layer help with creating a successful model?
-
-If a well known architecture was chosen:
-* What architecture was chosen?
-* Why did you believe it would be relevant to the traffic sign application?
-* How does the final model's accuracy on the training, validation and test set provide evidence that the model is working well?
- 
 
 ###Test a Model on New Images
 
 ####1. Choose five German traffic signs found on the web and provide them in the report. For each image, discuss what quality or qualities might be difficult to classify.
 
-Here are five German traffic signs that I found on the web:
+Here are ten German traffic signs that I found on the web:
 
 ![alt text][image4] ![alt text][image5] ![alt text][image6] 
 ![alt text][image7] ![alt text][image8]
