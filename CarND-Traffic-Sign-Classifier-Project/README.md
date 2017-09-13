@@ -31,7 +31,7 @@ signs data set:
 
 Here is an exploratory visualization of the data set. It is a bar chart showing all 43 classes and the number of samples associated with each class.
 
-![alt text][/images/training_sign_bar_chart.png]
+[Bar Chart]: ./images/training_sign_bar_chart.png "Class ID vs Quanitity"
 
 Here you can view each classID with associated sign name.
 
