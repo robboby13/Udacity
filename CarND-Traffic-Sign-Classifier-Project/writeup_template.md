@@ -81,51 +81,129 @@ EPOCHS, BATCH_SIZE, and sigma were adjusted to reach the 93% compliance mark
 
 Here are ten German traffic signs that I found on the web, the preprocessing function was applied to all ten for grayscale and data normalization.
 
+![Class ID 5](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/five.jpg)
 ![Class ID 8](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/eight.jpg)
-![Class ID 15](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/fifteen.jpg) 
-![Class ID 5](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/five.jpg) 
-![Class ID 14](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/fourteen.jpg) 
+![alt text](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/twelve.jpg)
 ![alt text](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/nine.jpg)
 ![alt text](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/thirteen.jpg)
-![alt text](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/thirty.jpg) 
-![alt text](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/three.jpg) 
-![alt text](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/twelve.jpg) 
+![alt text](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/three.jpg)
+![Class ID 15](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/fifteen.jpg) 
+![alt text](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/thirty.jpg)
+![Class ID 14](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/fourteen.jpg) 
 ![alt text](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/twentyfive.jpg)
-
 
 ####2. Discuss the model's predictions on these new traffic signs and compare the results to predicting on the test set. At a minimum, discuss what the predictions were, the accuracy on these new predictions, and compare the accuracy to the accuracy on the test set (OPTIONAL: Discuss the results in more detail as described in the "Stand Out Suggestions" part of the rubric).
 
-Here are the results of the prediction:
+Here are the results of the predictions:
 
 | Image			        |     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| Stop Sign      		| Stop sign   									| 
-| U-turn     			| U-turn 										|
-| Yield					| Yield											|
-| 100 km/h	      		| Bumpy Road					 				|
-| Slippery Road			| Slippery Road      							|
+| Speed Limit 80 KpH      		| Dangerous Curve to the right   									| 
+| Speed Limit 120 Kph     			| Speed Limit 120 KpH 										|
+| Priority Road					| Priority Road											|
+| No Passing	      		| End of no passing					 				|
+| Yield			| Yield      							|
+| Speed Limit 60 KpH			| Priority Road      							|
+| No Vehicles			| Speed Limit 30 KpH      							|
+| Beware of Ice and Snow			| Bicycles crossing      							|
+| Stop			| Speed Limit 30 KpH      							|
+| Road Work			| Bicycles crossing      							|
 
 
-The model was able to correctly guess 4 of the 5 traffic signs, which gives an accuracy of 80%. This compares favorably to the accuracy on the test set of ...
+The model was only 30% accuarate! NOT GOOD. This may have to do with the images not being fully centered, some of the images have significant amount of noise. 
 
-####3. Describe how certain the model is when predicting on each of the five new images by looking at the softmax probabilities for each prediction. Provide the top 5 softmax probabilities for each image along with the sign type of each probability. (OPTIONAL: as described in the "Stand Out Suggestions" part of the rubric, visualizations can also be provided such as bar charts)
+For example the stop sign is not completley centered.
+![Uncentered STOP Sign](https://github.com/robboby13/Udacity/blob/master/CarND-Traffic-Sign-Classifier-Project/test_images_jpg/fourteen.jpg) 
 
-The code for making predictions on my final model is located in the 11th cell of the Ipython notebook.
-
-For the first image, the model is relatively sure that this is a stop sign (probability of 0.6), and the image does contain a stop sign. The top five soft max probabilities were
+Below you can find the top 5 predictions for each German Traffic Sign
 
 | Probability         	|     Prediction	        					| 
 |:---------------------:|:---------------------------------------------:| 
-| .60         			| Stop sign   									| 
-| .20     				| U-turn 										|
-| .05					| Yield											|
-| .04	      			| Bumpy Road					 				|
-| .01				    | Slippery Road      							|
+| .209         			| Dangerous Curve to the right   									| 
+| .121     				| General caution 										|
+| .0915					| Stop											|
+| .0704	      			| Right-of-way at the next intersection					 				|
+| .064				    | Traffic signals      							|
 
 
-For the second image ... 
 
-### (Optional) Visualizing the Neural Network (See Step 4 of the Ipython notebook for more details)
-####1. Discuss the visual output of your trained network's feature maps. What characteristics did the neural network use to make classifications?
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| .128         			| Speed limit (120km/h)   									| 
+| .106     				| Speed limit (80km/h) 										|
+| .0732					| Speed limit (30km/h)											|
+| .0627	      			| Speed limit (20km/h)					 				|
+| .0491				    | Speed limit (70km/h)      							|
 
 
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| .126         			| Priority road   									| 
+| .0823     				| Roundabout mandatory 										|
+| .0615					| Stop											|
+| .0552	      			| Road work					 				|
+| .0429				    | Turn right ahead      							|
+
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| .0949         			| End of no passing   									| 
+| .0559     				| No passing 										|
+| .0488					| End of no passing by vehicles over 3.5 metric tons											|
+| .0483	      			| Right-of-way at the next intersection					 				|
+| .0411				    | No passing for vehicles over 3.5 metric tons      							|
+
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| .0959         			| Yield   									| 
+| .0509     				| Priority road 										|
+| .0383					| End of all speed and passing limits											|
+| .0365	      			| Speed limit (30km/h)					 				|
+| .034				    | Roundabout mandatory      							|
+
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| .0123         			| Priority road   									| 
+| .0114     				| Speed limit (60km/h) 										|
+| .0827					| Speed limit (80km/h)											|
+| .0708	      			| Speed limit (50km/h)					 				|
+| .0524				    | Children crossing      							|
+
+
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| .298         			| Speed limit (30km/h)   									| 
+| .163     				| Traffic signals 										|
+| .123					| Keep left											|
+| .117	      			| No entry					 				|
+| .0759				    | Go straight or left      							|
+
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| .2         			| Bicycles crossing   									| 
+| .194     				| Speed limit (80km/h)										|
+| .146					| Bumpy road											|
+| .0583	      			| Roundabout mandatory					 				|
+| .0571				    | Road work      							|
+
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| .207         			| Speed limit (30km/h)   									| 
+| .116     				| Speed limit (80km/h)										|
+| .062					| Stop											|
+| .0567	      			| Keep right				 				|
+| .0487				    | Roundabout mandatory      							|
+
+
+| Probability         	|     Prediction	        					| 
+|:---------------------:|:---------------------------------------------:| 
+| .137         			| Bicycles crossing   									| 
+| .126     				| Priority road										|
+| .073					| Speed limit (80km/h)											|
+| .0611	      			| Ahead only				 				|
+| .0503				    | Road work      							|
